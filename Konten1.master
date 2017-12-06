@@ -1,0 +1,273 @@
+﻿<%@ Master Language="VB" CodeFile="Konten1.master.vb" Inherits="Konten1" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+<head runat="server">
+    <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc." />
+        <meta name="author" content="Coderthemes" />
+    <title></title>
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="~/Asset/assets/images/favicon.ico" />
+        <!-- App title -->
+        <!-- DataTables -->
+        <link href="~/Asset/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+        <link href="~/Asset/plugins/datatables/buttons.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="~/Asset/plugins/datatables/fixedHeader.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="~/Asset/plugins/datatables/responsive.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="~/Asset/plugins/datatables/scroller.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="~/Asset/plugins/datatables/dataTables.colVis.css" rel="stylesheet" type="text/css"/>
+        <link href="~/Asset/plugins/datatables/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="~/Asset/plugins/datatables/fixedColumns.dataTables.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- App css -->
+        <link href="~/Asset/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="~/Asset/assets/css/core.css" rel="stylesheet" type="text/css" />
+        <link href="~/Asset/assets/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="~/Asset/assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="~/Asset/assets/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="~/Asset/assets/css/menu.css" rel="stylesheet" type="text/css" />
+        <link href="~/Asset/assets/css/responsive.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="~/Asset/plugins/switchery/switchery.min.css"/>
+
+        <script src="<%= ResolveUrl("~/Asset/assets/js/modernizr.min.js") %>"></script>
+    </head>
+    </asp:ContentPlaceHolder>
+<body class="fixed-left">
+
+        <!-- Begin page -->
+        <div id="wrapper">
+            <asp:ContentPlaceHolder ID="header" runat="server">
+            <!-- Top Bar Start -->
+            <div class="topbar">
+
+                <!-- LOGO -->
+                <div class="topbar-left">
+                    <a href="index.html" class="logo"><span>e-<span>Mentor</span></span><i class="mdi mdi-layers"></i></a>
+                    
+                </div>
+
+                <!-- Button mobile view to collapse sidebar menu -->
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="container">
+
+                        <!-- Navbar-left -->
+                        <ul class="nav navbar-nav navbar-left">
+                            <li>
+                                <button class="button-menu-mobile open-left waves-effect">
+                                    <i class="mdi mdi-menu"></i>
+                                </button>
+                            </li>
+                            <li class="hidden-xs">
+                                <form role="search" class="app-search">
+                                    <input type="text" placeholder="Search..."
+                                           class="form-control">
+                                    <a href=""><i class="fa fa-search"></i></a>
+                                </form>
+                            </li>
+                        </ul>
+
+
+
+                        <!-- Right(Notification) -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#" class="right-menu-item dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-user"></i>
+                                   
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right dropdown-lg user-list notify-list">
+                                    <li>
+                                        <h5><asp:Label ID="Label1" runat="server"></asp:Label></h5>
+                                    </li>
+                                    <li><asp:HyperLink ID="HyperLink16" NavigateUrl="~/View/pementor/Profil.aspx" runat="server"><i class="ti-user m-r-5"></i> Profile</asp:HyperLink> </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink12" NavigateUrl="~/logout.aspx" runat="server"><i class="ti-power-off m-r-5"></i> Logout</asp:HyperLink></li>
+               
+                                </ul>
+                            </li>
+
+                        </ul> <!-- end navbar-right -->
+
+                    </div><!-- end container -->
+                </div><!-- end navbar -->
+            </div>
+            <!-- Top Bar End -->
+            </asp:ContentPlaceHolder>
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left side-menu">
+                <div class="sidebar-inner slimscrollleft">
+
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+                        <ul>
+                        	<li class="menu-title">Menu</li>
+
+                            <li class="has_sub">
+                                <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/View/pementor/Dashboard.aspx"><i class="mdi mdi-view-dashboard"></i> <span> Dashboard </span> </asp:HyperLink>
+                            </li>
+                            <li class="has_sub">
+                                <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/View/pementor/Kehadiran.aspx"><i class="fa fa-pie-chart"></i> <span> Presensi </span> </asp:HyperLink>
+                            </li>
+                            
+                             <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-users"></i><span> Absensi </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/View/Pementor/AbsenMente.aspx">Absensi Mente</asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/View/Pementor/rekap.aspx">Rekap Absensi</asp:HyperLink></li>
+                                </ul>
+                            </li>
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-user"></i><span> Daftar Amalan </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/View/Pementor/amalan.aspx">Amalan Yaummi</asp:HyperLink></li>
+                                </ul>
+                            </li>
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-book"></i><span> Kelompok </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/View/pementor/Kelompok.aspx">Detail Kelompok</asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/View/pementor/listAnggota.aspx">Daftar Anggota</asp:HyperLink></li>
+                                </ul>
+                            </li>
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-tasks"></i><span> Rekap Nilai </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/View/pementor/penilaian.aspx">Penilaian</asp:HyperLink></li>
+                                </ul>
+                            </li>
+
+                            <li class="menu-title">Lainnya</li>
+                            <li class="has_sub">
+                             
+                                <asp:HyperLink ID="HyperLink13" runat="server" NavigateUrl="~/View/pementor/Berita.aspx"> <i class="mdi mdi-comment-text-outline"></i> <span>Berita </span> </asp:HyperLink>
+                            </li>
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-sitemap"></i><span> Jadwal </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/View/pementor/Jadwal.aspx">List Jadwal</asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="~/View/pementor/requestJadwal.aspx">Request Jadwal</asp:HyperLink></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Sidebar -->
+                    <div class="clearfix"></div>
+
+                </div>
+                <!-- Sidebar -left -->
+
+            </div>
+            
+            </div>
+            <!-- Left Sidebar End -->
+            <br />
+            <br />
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card-box table-responsive">
+
+                        <asp:ContentPlaceHolder ID="Content" runat="server">
+                        </asp:ContentPlaceHolder>
+                        </div>
+                      </div>
+                            </div>
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+            
+                <footer class="footer text-right">
+                    2016 © Sistem e-Mentoring Politeknik Caltex Riau.
+                </footer>
+
+            </div>
+
+         </div>
+        <!-- END wrapper -->
+
+    <script>
+        var resizefunc = [];
+        </script>
+
+        <!-- jQuery  -->
+        <script src="<%= ResolveUrl("~/Asset/assets/js/jquery.min.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Asset/assets/js/bootstrap.min.js")%>"></script>
+        <script src="<%= ResolveUrl("~/Asset/assets/js/detect.js")%>"></script>
+        <script src="<%= ResolveUrl("~/Asset/assets/js/fastclick.js")%>"></script>
+        <script src="<%= ResolveUrl("~/Asset/assets/js/jquery.blockUI.js")%>"></script>
+        <script src="<%= ResolveUrl("~/Asset/assets/js/waves.js")%>"></script>
+        <script src="<%= ResolveUrl("~/Asset/assets/js/jquery.slimscroll.js")%>"></script>
+        <script src="<%= ResolveUrl("~/Asset/assets/js/jquery.scrollTo.min.js")%>"></script>
+        <script src="<%= ResolveUrl("~/Asset/plugins/switchery/switchery.min.js") %>"></script>
+
+        <script src="<%= ResolveUrl("~/Asset/plugins/datatables/jquery.dataTables.min.js")%>"></script>
+        <script src="<%= ResolveUrl("~/Asset/plugins/datatables/dataTables.bootstrap.js")%>"></script>
+
+        <script src="<%= ResolveUrl("~/Asset/plugins/datatables/dataTables.buttons.min.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Asset/plugins/datatables/buttons.bootstrap.min.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Asset/plugins/datatables/jszip.min.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Asset/plugins/datatables/pdfmake.min.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Asset/plugins/datatables/vfs_fonts.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Asset/plugins/datatables/buttons.html5.min.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Asset/plugins/datatables/buttons.print.min.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Asset/plugins/datatables/dataTables.fixedHeader.min.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Asset/plugins/datatables/dataTables.keyTable.min.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Asset/plugins/datatables/dataTables.responsive.min.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Asset/plugins/datatables/responsive.bootstrap.min.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Asset/plugins/datatables/dataTables.scroller.min.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Asset/plugins/datatables/dataTables.colVis.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Asset/plugins/datatables/dataTables.fixedColumns.min.js") %>"></script>
+
+        <!-- init -->
+        <script src="<%= ResolveUrl("~/Asset/assets/pages/jquery.datatables.init.js") %>"></script>
+        
+        <!-- App js -->
+        <script src="<%= ResolveUrl("~/Asset/assets/js/jquery.core.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Asset/assets/js/jquery.app.js") %>"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#datatable').dataTable();
+                $('#datatable-keytable').DataTable({ keys: true });
+                $('#datatable-responsive').DataTable();
+                $('#datatable-colvid').DataTable({
+                    "dom": 'C<"clear">lfrtip',
+                    "colVis": {
+                        "buttonText": "Change columns"
+                    }
+                });
+                $('#datatable-scroller').DataTable({
+                    ajax: "../plugins/datatables/json/scroller-demo.json",
+                    deferRender: true,
+                    scrollY: 380,
+                    scrollCollapse: true,
+                    scroller: true
+                });
+                var table = $('#datatable-fixed-header').DataTable({ fixedHeader: true });
+                var table = $('#datatable-fixed-col').DataTable({
+                    scrollY: "300px",
+                    scrollX: true,
+                    scrollCollapse: true,
+                    paging: false,
+                    fixedColumns: {
+                        leftColumns: 1,
+                        rightColumns: 1
+                    }
+                });
+            });
+            TableManageButtons.init();
+
+        </script>
+    </body>
+</html>

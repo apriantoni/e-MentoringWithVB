@@ -1,0 +1,234 @@
+﻿<%@ Master Language="VB" CodeFile="WYGIWYS.master.vb" Inherits="WYGIWYS" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+<head runat="server">
+    <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc." />
+        <meta name="author" content="Coderthemes" />
+    <title></title>
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="~/Asset/assets/images/favicon.ico" />
+        <!-- App title -->
+        
+        <!-- App css -->
+        <link href="~/Asset/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="~/Asset/assets/css/core.css" rel="stylesheet" type="text/css" />
+        <link href="~/Asset/assets/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="~/Asset/assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="~/Asset/assets/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="~/Asset/assets/css/menu.css" rel="stylesheet" type="text/css" />
+        <link href="~/Asset/assets/css/responsive.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="~/Asset/plugins/switchery/switchery.min.css"/>
+
+        <script src="<%= ResolveUrl("~/Asset/assets/js/modernizr.min.js") %>"></script>
+    </head>
+    </asp:ContentPlaceHolder>
+<body class="fixed-left">
+
+        <!-- Begin page -->
+        <div id="wrapper">
+            <asp:ContentPlaceHolder ID="header" runat="server">
+            <!-- Top Bar Start -->
+            <div class="topbar">
+
+                <!-- LOGO -->
+                <div class="topbar-left">
+                    <a href="index.html" class="logo"><span>e-<span>Mentor</span></span><i class="mdi mdi-layers"></i></a>
+                    
+                </div>
+
+                <!-- Button mobile view to collapse sidebar menu -->
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="container">
+
+                        <!-- Navbar-left -->
+                        <ul class="nav navbar-nav navbar-left">
+                            <li>
+                                <button class="button-menu-mobile open-left waves-effect">
+                                    <i class="mdi mdi-menu"></i>
+                                </button>
+                            </li>
+                            <li class="hidden-xs">
+                                <form role="search" class="app-search">
+                                    <input type="text" placeholder="Search..."
+                                           class="form-control">
+                                    <a href=""><i class="fa fa-search"></i></a>
+                                </form>
+                            </li>
+                        </ul>
+
+
+
+                        <!-- Right(Notification) -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#" class="right-menu-item dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-user-secret"></i>
+                                   
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right dropdown-lg user-list notify-list">
+                                    <li>
+                                        <h5>Hi, John</h5>
+                                    </li>
+                                    <li><a href="javascript:void(0)"><i class="ti-user m-r-5"></i> Profile</a></li>
+                                    <li><a href="javascript:void(0)"><i class="ti-power-off m-r-5"></i> Logout</a></li>
+               
+                                </ul>
+                            </li>
+
+                        </ul> <!-- end navbar-right -->
+
+                    </div><!-- end container -->
+                </div><!-- end navbar -->
+            </div>
+            <!-- Top Bar End -->
+            </asp:ContentPlaceHolder>
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left side-menu">
+                <div class="sidebar-inner slimscrollleft">
+
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+                        <ul>
+                        	<li class="menu-title">Menu</li>
+
+                            <li class="has_sub">
+                                <a href="index.html" class="waves-effect"><i class="mdi mdi-view-dashboard"></i> <span> Dashboard </span> </a>
+                            </li>
+                             <li class="has_sub">
+                                <a href="index.html" class="waves-effect"><i class="fa fa-user"></i> <span>Data Diri </span> </a>
+                            </li>
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-list-alt"></i> <span> Kuisioner </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="ui-buttons.html">Kriteria Kuisioner</a></li>
+                                    <li><a href="ui-typography.html">Daftar Kuisioner</a></li>
+                                    <li><a href="ui-panels.html">Hasil Kuisioner</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-users"></i><span> Data User </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="page-starter.html">Pementor</a></li>
+                                    <li><a href="page-login.html">Mente</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-book"></i><span> Rekap Nilai </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="extras-profile.html">Daftar Kelompok</a></li>
+                                    <li><a href="extras-sitemap.html">Daftar Nilai</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="menu-title">Lainnya</li>
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-comment-text-outline"></i><span> Berita </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="blogs-dashboard.html">Tambah Berita</a></li>
+                                    <li><a href="blogs-blog-list.html">Daftar Berita</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-sitemap"></i><span> Jadwal </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="real-estate-dashboard.html">Tambah Jadwal</a></li>
+                                    <li><a href="real-estate-list.html">Daftar Jadwal</a></li>
+                                    <li><a href="real-estate-column.html">Perubahan Jadwal</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- Sidebar -->
+                    <div class="clearfix"></div>
+
+                </div>
+                <!-- Sidebar -left -->
+
+            </div>
+            <!-- Left Sidebar End -->
+
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container">
+
+                        <asp:ContentPlaceHolder ID="Content" runat="server">
+                        </asp:ContentPlaceHolder>
+                        
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                <footer class="footer text-right">
+                    2016 © Sistem e-Mentoring Politeknik Caltex Riau.
+                </footer>
+
+            </div>
+
+         </div>
+        <!-- END wrapper -->
+
+    <script>
+        var resizefunc = [];
+        </script>
+
+        <!-- jQuery  -->
+        <script src="<%= ResolveUrl("~/Asset/assets/js/jquery.min.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Asset/assets/js/bootstrap.min.js")%>"></script>
+        <script src="<%= ResolveUrl("~/Asset/assets/js/detect.js")%>"></script>
+        <script src="<%= ResolveUrl("~/Asset/assets/js/fastclick.js")%>"></script>
+        <script src="<%= ResolveUrl("~/Asset/assets/js/jquery.blockUI.js")%>"></script>
+        <script src="<%= ResolveUrl("~/Asset/assets/js/waves.js")%>"></script>
+        <script src="<%= ResolveUrl("~/Asset/assets/js/jquery.slimscroll.js")%>"></script>
+        <script src="<%= ResolveUrl("~/Asset/assets/js/jquery.scrollTo.min.js")%>"></script>
+        <script src="<%= ResolveUrl("~/Asset/plugins/switchery/switchery.min.js") %>"></script>
+
+        <script src="<%= ResolveUrl("~/Asset/assets/js/jquery.core.js") %>"></script>
+        <script src="<%= ResolveUrl("~/Asset/assets/js/jquery.app.js") %>"></script>
+
+        <!--Wysiwig js-->
+        <script src="<%= ResolveUrl("~/Asset/plugins/tinymce/tinymce.min.js") %>"></script>
+
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                if ($("#elm1").length > 0) {
+                    tinymce.init({
+                        selector: "textarea#elm1",
+                        theme: "modern",
+                        height: 300,
+                        plugins: [
+			                "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+			                "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+			                "save table contextmenu directionality emoticons template paste textcolor"
+                        ],
+                        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+                        style_formats: [
+			                { title: 'Bold text', inline: 'b' },
+			                { title: 'Red text', inline: 'span', styles: { color: '#ff0000' } },
+			                { title: 'Red header', block: 'h1', styles: { color: '#ff0000' } },
+			                { title: 'Example 1', inline: 'span', classes: 'example1' },
+			                { title: 'Example 2', inline: 'span', classes: 'example2' },
+			                { title: 'Table styles' },
+			                { title: 'Table row 1', selector: 'tr', classes: 'tablerow1' }
+                        ]
+                    });
+                }
+            });
+        </script>
+
+    </body>
+</html>
+

@@ -1,0 +1,54 @@
+<asp:GridView ID="GridView1" 
+                DataSourceID="KelompokSqlDataSource" 
+                AutoGenerateColumns="false"
+                DataKeyNames="id_kelompok" 
+                OnSelectedIndexChanged="Kelompok_OnSelectedIndexChanged"
+                RunAt="Server">
+
+                <HeaderStyle backcolor="Navy"
+                  forecolor="White" />
+
+                <Columns>
+
+                  <asp:ButtonField Text="Details..."
+                    HeaderText="Show<BR>Details"
+                    CommandName="Select"/>  
+
+                  <asp:BoundField DataField="id_kelompok" HeaderText="id_kelompok"/>
+                  <asp:BoundField DataField="nama_kelompok"   HeaderText="nama_kelompok"/>                        
+                  <asp:BoundField DataField="nama_pementor"  HeaderText="nama_pementor"/>
+
+                </Columns>
+
+              </asp:GridView>
+
+
+<a href="#dialog-mahasiswa" data-toggle="modal"><div class="btn btn-success waves-effect waves-light btn-xs m-b-5"><i class="fa fa-edit "></i></div>
+
+
+<asp:GridView ID="GridView1" 
+                DataSourceID="SqlDataSource1" 
+                AutoGenerateColumns="false"
+                DataKeyNames="id_kelompok" 
+                OnSelectedIndexChanged="Kelompok_OnSelectedIndexChanged"
+                RunAt="Server">
+
+                <HeaderStyle backcolor="Navy"
+                  forecolor="White" />
+
+                <Columns>
+
+                  <asp:ButtonField Text="Details..."
+                    HeaderText="Show<BR>Details"
+                    CommandName="Select"/>  
+
+                  <asp:BoundField DataField="id_kelompok" HeaderText="id_kelompok"/>
+                  <asp:BoundField DataField="nama_kelompok"   HeaderText="nama_kelompok"/>                        
+                  <asp:BoundField DataField="nama_pementor"  HeaderText="nama_pementor"/>
+
+                </Columns>
+
+              </asp:GridView>
+<asp:buttonfield text='<a href="#mahasiswa" data-toggle="modal"><div class="btn btn-success waves-effect waves-light btn-xs m-b-5"><i class="fa fa-edit "></i></div>'
+                    headertext="show<br>details"
+                    commandname="select"/>  
